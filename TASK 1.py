@@ -17,5 +17,13 @@ class Samsung(Tecno):
         print("Version:", self.version)
         print("Battery Power:", self.battery_power)
         print("Price: Confidential")
+       # Demonstrating Data Hiding:
+        try:
+            print("Price:", self.__price)
+        except AttributeError:
+            print("Price: [ACCESS DENIED] This data is hidden.")
+
+
 phone = Samsung("Galaxy", "S23", "5000mAh", 70000)
 phone.display_details()
+
